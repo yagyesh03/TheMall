@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: TheMall
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Mr.Robot
+Implementation-Vendor-Id: com.mr.theMall
+Build-Jdk: 1.8.0_51
+Implementation-URL: https://spring.io/projects/spring-boot/TheMall
+Created-By: Maven Integration for Eclipse
+
