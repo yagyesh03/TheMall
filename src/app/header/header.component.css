@@ -1,0 +1,65 @@
+.menu > li{
+    margin-left: 6%;
+}
+
+.border-left > div{
+
+    border-right: 0.1px solid rgba(0, 0, 0, 0.178);
+    
+}
+
+.button-style:hover{
+    background-color: rgb(112, 9, 22) ;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.expandable-info{
+    margin-top: -1px;
+    
+}
+
+
+  .div1 {
+    padding-top: 30%;  
+    position: relative;
+    height: 300px;
+    width: 400px;
+    perspective: 170px;
+    
+  
+  }
+  
+  .div2{
+    position: absolute;
+    
+    transform-style: preserve-3d;
+    transform: rotateY(-40deg);
+  }
+
+
+  .contact-info button {
+    color:rgb(216, 140, 0);
+    background-color: transparent;
+    border: none;
+    outline: none;
+  
+  }
+
+
+  .wardrobe{
+    background-image: linear-gradient(to top,rgb(119, 34, 45) ,black);
+  }
+
+
+
+  /* #entertain{
+   
+    background-image:url("http://www.iskate.co.in/images/get-your-stkate-on.jpg");
+    height: 500px;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */

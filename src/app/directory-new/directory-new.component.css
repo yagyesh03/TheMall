@@ -1,0 +1,374 @@
+/* 450px to 900px */
+.body{
+    background: #292020;
+}
+
+
+/* Carousel */
+.carousel-inner{
+    background: linear-gradient(red, black);
+    max-height: 500px;
+}
+
+.carousel-inner img{
+    opacity: 0.5;
+}
+
+
+.carousel-caption{
+    color: white;
+    text-align: left;
+    padding-top: 90px;
+    padding-bottom: 0;
+}
+
+
+.carousel-caption h2{
+    font-size: 50px;
+    font-family: 'Audiowide', 'Baloo Bhai 2', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.carousel-caption p{
+    font-size: 30px;
+    font-family: 'Baloo Bhai 2', cursive; 
+}
+
+.carousel-caption button{
+    visibility: hidden;
+}
+
+button:hover{
+    box-shadow: 0px 0px 20px 1px gray;
+    transition-duration: 100ms;
+    transform: scale(1.1);
+}
+
+
+/* Search */
+.search{
+    margin-top: 20px;
+}
+
+.search button{
+    padding: 5px;
+}
+
+.search button,input{
+    width: 90%;
+}
+
+.brandNameInput{
+    height: 45px;
+    background-color: maroon;
+    width: 100%;
+    border-left:maroon;
+    border-top:maroon;
+    border-bottom-color: black;
+    border-right-width: 0;
+}
+
+
+/* Bottom */
+.bottom{
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.lo_inside img, .blocks img{
+    opacity: 0.7;
+    z-index: inherit;
+}
+
+.lo_inside{
+    position: relative;
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    box-shadow: 0px 0px 10px 2px black;
+}
+
+.brand-caption{
+    position: absolute;
+    background: transparent;
+    top:20%;
+    padding-left: 20px;
+}
+
+.brand-caption h2{
+    color: white;
+    font-size: 30px;
+    font-family: 'Audiowide';
+}
+
+.brand-caption h1{
+    color: white;
+    font-size: 40px;
+    font-family: 'Audiowide';
+}
+
+
+
+.brand-caption p{
+    color: white;
+    font-size: 10px;
+    font-family: 'Baloo Bhai 2', cursive;  
+}
+
+
+.divZoom:hover .imgZoom{
+    transform: scale(2);
+    transition-duration: 20s;
+}
+
+.divRotate:hover{
+    transition-duration: 2s;
+    transform: rotate3d(0, 0, 1, 360deg);
+}
+
+
+
+
+/* BOTTOM - 2 */
+.blocks{
+    position: relative;
+    padding: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+    background: linear-gradient( rgba(255,0,0,1), blue);
+    box-shadow: 0px 0px 10px 2px black;
+}
+
+
+
+/* ALL BRANDS  */
+
+.brand {
+    height: 150px;
+    width: 250px;
+    margin: 30px;
+    position: relative;
+    box-shadow: 0px 0px 20px 5px black;
+  }
+
+.brand .imagetest{
+    width: 101%;
+    height: 101%;
+    margin-left: -9px;
+    margin-top: -9px;
+    position: absolute;
+  }
+
+.brand:hover .imagetest{
+    opacity: 0.4;
+    transition-delay: 1s; 
+    transition-duration: 2s;
+    transform-style: preserve-3d;
+    /* transform: rotateX(360deg); */
+  }
+
+.brandName{
+    margin-top: 5px;
+    color: white;
+    position: relative;
+    font-size: 30px;
+    font-family: 'Black Han Sans', 'Audiowide';
+    text-shadow: black 10px 10px 5px;
+  }
+
+.brandInfo{
+    font-family: Black Han Sans;
+    color: white;
+    bottom: 30%;
+    text-shadow: black 10px 10px 5px;
+    display: none;
+  }
+
+.brand:hover .brandInfo{
+    display: initial
+}
+
+.btn-dark{
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+.btn-dark:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px black;
+}
+
+
+
+/* 900px & ABOVE */
+@media only screen and ( min-width: 1200px ){
+/* carousel */
+    .carousel-caption{
+        color: white;
+        padding-bottom: 300px;
+        text-align: left;
+    }
+    
+    .carousel-caption h2{
+        font-size: 60px;
+    }
+    
+    .carousel-caption button{
+        font-family: 'Material Icons';
+        font-size: 15px;
+        visibility: visible;
+    }
+
+/* search */
+    .search{
+        margin-top: 50px;
+    }
+
+    .search button{
+        width: 80%;
+        padding: 10px;
+    }
+
+
+/* Bottom */
+    .brand-caption{
+        position: absolute;
+        background: transparent;
+        padding-left: 20px;
+    }
+
+    .brand-caption h2{
+        color: white;
+        font-size: 50px;
+        text-shadow: 5px 5px gray;
+        font-family: 'Audiowide';
+    }
+    
+    .brand-caption p{
+        color: white;
+        font-size: 20px;
+        font-family: 'Baloo Bhai 2', cursive;  
+    }
+
+    .lo_inside img, .blocks img{
+        opacity: 0.8;
+        z-index: inherit;
+    }
+
+
+
+
+    /* BOTTOM - 2 */
+
+    .blocks{
+        position: relative;
+        padding: 0px;
+        margin: 25px;
+        background: linear-gradient( rgba(255,0,0,1), blue);
+        box-shadow: 0px 0px 10px 2px black;
+    }
+
+    .blocks button{
+        visibility: hidden;
+    }
+
+}
+
+
+
+
+
+
+/* 300px to 450px */
+@media only screen and ( max-width: 450px ){
+
+    /* CAROUSEL */
+    .carousel-caption{
+        color: white;
+        text-align: left;
+    }   
+
+    .carousel-caption hr{
+        visibility: hidden;
+        margin: 0;
+    }
+    
+    .carousel-caption h2{
+        margin-top: 200px;
+        font-size: 20px;
+        font-family: 'Audiowide';
+    }
+    
+    .carousel-caption p{
+        font-family: 'sofia';
+        font-size: 5px;   
+    }
+    
+    .carousel-caption button{
+        visibility: hidden;
+    }
+
+
+
+    /* SEARCH */
+    .searchOnly{
+        background: wheat;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    .buttons2 button{
+        width: 85%;
+    }
+
+
+    .brand-caption{
+        position: absolute;
+        background: transparent;
+        bottom:10%;
+        padding-left: 20px;
+    }
+
+    .brand-caption h2{
+        color: white;
+        font-size: 20px;
+        font-family: 'Audiowide';
+    }
+
+    .brand-caption p{
+        color: white;
+        font-size: 10px;
+        font-family: 'sofia';   
+    }
+
+    .bottom button{
+        padding: 5px;
+    }
+
+    .brand:hover{
+        transition: 1s;
+        margin-left: 50px;
+    }
+
+
+}
+
+@media only screen and ( max-width: 300px ){
+   
+    .carousel-caption p{
+        visibility: hidden;
+        height: 0;
+    }
+
+    hr{
+        visibility: hidden;
+        height: 0;
+    }
+
+    p{
+        visibility: hidden;
+        height: 0;
+    }
+
+    .brandInfo button{
+        display: none;
+    }
+    
+}

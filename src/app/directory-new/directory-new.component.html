@@ -1,0 +1,357 @@
+<div class="body">
+
+
+    <div class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" *ngFor = "let brand of carouselBrands; let i = index" [attr.data-slide-to]="i" ngClass=" i == 0 ? 'active' : '' "></li>
+        </ol>
+        <div class="carousel-inner">
+            <div *ngFor = "let shop of carouselBrands; let i = index" class="divZoom carousel-item" [ngClass]="{'active' : i == 0}">
+                <img class="imgZoom d-block w-100" src="{{shop.brand.photoURL}}" alt="First slide">
+                <div class="carousel-caption">
+                    <h2>{{shop.brand.brandName}} </h2>
+                    <hr style="height:2px; background: white">
+                    <p>{{shop.brand.brandDescription}}</p>
+                    <button type="button" class="btn btn-outline-light">Discover About {{shop.brand.brandName}}</button>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        </div>
+    </div>
+
+
+    
+    <div class="bottom"  onscroll="testFunction()" style="background-image: url('assets/img/back1.jpg');">
+
+        <br>
+        <div data-aos="fade-right" 
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="3000"
+        class="search" style="background:maroon;padding-top:20px;padding-bottom: 20px;box-shadow: 0px 0px 10px 10px black;"> 
+
+            <form class="form-inline col-lg-12 col-md-12 col-sm-12 col-xs-12" action="">
+                
+                <div class="form-group searchOnly col-lg-8 col-md-8 col-sm-8 col-xs-12">
+    
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-10">
+                
+                        <input type="text" placeholder="Search By Brand" class="brandNameInput" id="brandName">
+                        
+                    </div>
+                    
+                    <div class="buttons1 col-lg-3 col-md-3 col-sm-3 col-xs-2">
+                    
+                        <button type="submit" class="btn btn-outline-light" style="margin-left: 20px;">Search</button>
+                    
+                    </div>
+    
+                </div>
+    
+                <div class="buttons2 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                
+                    <button (click)="scrollOnClick()" type="submit" class="scroll btn btn-outline-light" style="margin-left: 20px;" title="Click to See All Brands ">View All Shops</button>
+                
+                </div>
+                
+            </form>
+    
+    
+        </div>
+
+        <br><br>
+
+        <div  class="layerTwo" style="position: relative;">
+
+
+            <div data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="3000" class=" col-lg-7" style="height: 100%; width: 100%; position: relative;display: inline-block;overflow: hidden;">
+                
+                <div class="divZoom lo_inside">
+                    <img class="imgZoom" style="width: 100%; height: 100%;" src="{{this.topBrands[0].brand.photoURL}}" alt="layerOne-ImageOne">
+                    <div class="brand-caption" >
+                        <h2>{{this.topBrands[0].brand.brandName}}</h2>
+                        <hr style="height:2px; background: white">
+                        <p> {{this.topBrands[0].brand.brandDescription}}</p>
+                        <button type="button" class="btn btn-outline-light">Find Out More</button>
+                    </div>
+                
+                </div>
+            
+            </div>
+
+            <div data-aos="flip-right"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="3000" class="col-lg-5" style="height: 100%; width: 100%; display: inline-block;">
+            
+                <div class="lo_inside divRotate">
+                    
+                    <img class="imgRotate" style="width: 100%; height: 100%;" src="{{this.topBrands[1].brand.photoURL}}" alt="layerOne-ImageOne">
+                    <div class="brand-caption" >
+                        <h2>{{this.topBrands[1].brand.brandName}} </h2>
+                        <hr style="height:2px; background: white">
+                        <p>{{this.topBrands[1].brand.brandDescription}}</p>
+                        <button type="button" class="btn btn-outline-light">Find Out More</button>
+                    </div>
+                
+                </div>
+            
+            </div>
+
+        </div>
+        
+        <br>
+
+        <div class="layerTwo" style="position: relative;">
+
+
+            <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="100"class=" col-lg-7" style="height: 100%; width: 100%; position: relative;display: inline-block;overflow: hidden;">
+                
+                <div class="divZoom lo_inside">
+                
+                    <img class="imgZoom" style="width: 100%; height: 100%;" src="{{this.topBrands[2].brand.photoURL}}" alt="layerOne-ImageOne">
+                    <div class="brand-caption">
+                        <h2>{{this.topBrands[2].brand.brandName}} </h2>
+                        <hr style="height:2px; background: white">
+                        <p>{{this.topBrands[2].brand.brandDescription}}</p>
+                        <button type="button" class="btn btn-outline-light">Find Out More</button>
+                    </div>
+                    
+                </div>
+            
+            </div>
+
+            <div data-aos="fade-zoom-out"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+            data-aos-duration="2000" class="col-lg-5" style="height: 100%; width: 100%; display: inline-block;overflow: hidden;">
+            
+                <div class="divZoom lo_inside">
+            
+                    <img class="imgZoom" style="width: 100%; height: 100%;" src="{{this.topBrands[3].brand.photoURL}}" alt="layerOne-ImageOne">
+                    <div class="brand-caption" >
+                        <h2>{{this.topBrands[3].brand.brandName}} </h2>
+                        <hr style="height:2px; background: white">
+                        <p>{{this.topBrands[3].brand.brandDescription}}</p>
+                        <button type="button" class="btn btn-outline-light">Find Out More</button>
+                    </div>
+                
+                </div>
+            
+            </div>
+
+        </div>
+        
+    </div>
+
+    <br><br>
+    <div class="divZoom" style="overflow: hidden; width: 100%; height: 300px; margin-top: 0%; margin-bottom: 0%; box-shadow: 0px 0px 10px 5px black;">
+        
+        <div class="imgZoom" style=" width: 100%; height: 100%; background-image: url('https://blush.ly/cQ4uc_ofX/p?bg=292020'); background-attachment: fixed;">
+
+        </div>
+
+    </div>
+
+    <br><br>
+
+
+    <div class="bottom" style="background-image: url('assets/img/back2.jpg');">
+        <br>
+        <br>
+        <br>
+
+        
+        <div class="picks col-lg-12" style="padding: 10px; margin-top: 30px; margin-bottom: 30px; box-shadow: 0px 0px 10px 10px black; background: linear-gradient(to right, #3E2F5B 0%, #FFC857 74%);">
+
+            <div  data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-delay="700" data-aos-duration="1000" class="line col-lg-10">
+                <hr style="height:2px; background: white">
+            </div>
+
+            <div class="text col-lg-6" style="color: white; position: initial;">
+                <h4 style="font-size: 30px; text-align: right; font-family: monospace;">Our Picks</h4>
+            </div>
+
+            <div data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-delay="500" data-aos-duration="9000" class="line col-lg-6">
+                <hr style="height:2px; background: white">
+            </div>
+
+        </div>
+
+        <div class="layer3 col-lg-12">
+
+            <div data-aos="fade-right" 
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                class="divZoom blocks col-lg-4" style="height: 100%; width: 100%; display: inline-block;overflow: hidden;">
+
+                <img class="imgZoom" style="width: 100%; height: 100%;" src="{{this.topBrands[4].brand.photoURL}}" alt="layerOne-ImageOne">
+                    <div class="brand-caption" >
+                        <h2>{{this.topBrands[4].brand.brandName}} </h2>
+                        <hr style="height:2px; background: white">
+                        <p>{{this.topBrands[4].brand.brandDescription}}</p>
+                        <button type="button" class="btn btn-outline-light">Find Out More</button>
+                    </div>
+
+            </div>
+            
+            <div class= "blocks col-lg-3 divRotate" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-delay="500"  style="height: 100%; width: 100%; display: inline-block;">
+
+                <img class="imgRotate" style="width: 100%; height: 100%;" src="{{this.topBrands[5].brand.photoURL}}" alt="layerOne-ImageOne">
+                    <div class="brand-caption" >
+                        <h2>{{this.topBrands[5].brand.brandName}} </h2>
+                        <hr style="height:2px; background: white">
+                        <p>{{this.topBrands[5].brand.brandDescription}}</p>
+                        <button type="button" class="btn btn-outline-light">Find Out More</button>
+                    </div>
+
+            </div>
+
+            <div class="blocks col-lg-3 divRotate" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-delay="1000" data-aos-duration="15000" style="height: 100%; width: 100%; display: inline-block;">
+                
+                <img class="imgRotate" style="width: 100%; height: 100%;" src="{{this.topBrands[6].brand.photoURL}}" alt="layerOne-ImageOne">
+                    <div class="brand-caption" >
+                        <h2>{{this.topBrands[6].brand.brandName}} </h2>
+                        <hr style="height:2px; background: white">
+                        <p>{{this.topBrands[6].brand.brandDescription}}</p>
+                        <button type="button" class="btn btn-outline-light">Find Out More</button>
+                    </div>
+
+            </div>
+
+        </div>
+
+
+        <br>
+        <br>
+
+
+        <div class="layer4 col-lg-12">
+
+            <div class=" divRotate blocks col-lg-4" style="height: 100%; width: 100%; display: inline-block;">
+
+                <img class="imgRotate" style="width: 100%; height: 100%; " src="{{this.topBrands[7].brand.photoURL}}" alt="layerOne-ImageOne">
+                    <div class="brand-caption">
+                        <h2>{{this.topBrands[7].brand.brandName}} </h2>
+                        <hr style="height:2px; background: white">
+                        <p>{{this.topBrands[7].brand.brandDescription}}</p>
+                        <button type="button" class="btn btn-outline-light">Find Out More</button>
+                    </div>
+
+            </div>
+
+            <div class="divZoom blocks col-lg-3" style="height: 100%; width: 100%; display: inline-block; overflow: hidden;">
+
+                <img class="imgZoom" style="width: 100%; height: 100%;" src="{{this.topBrands[8].brand.photoURL}}" alt="layerOne-ImageOne">
+                    <div class="brand-caption" >
+                        <h2>{{this.topBrands[8].brand.brandName}} </h2>
+                        <hr style="height:2px; background: white">
+                        <p>{{this.topBrands[8].brand.brandDescription}}</p>
+                        <button type="button" class="btn btn-outline-light">Find Out More</button>
+                    </div>
+
+            </div>
+
+            <div class="divZoom blocks col-lg-3" style="height: 100%; width: 100%; display: inline-block;overflow: hidden;">
+
+                <img class="imgZoom" style="width: 100%; height: 100%;" src="{{this.topBrands[9].brand.photoURL}}" alt="layerOne-ImageOne">
+                    <div class="brand-caption" >
+                        <h2>{{this.topBrands[9].brand.brandName}} </h2>
+                        <hr style="height:2px; background: white">
+                        <p>{{this.topBrands[9].brand.brandDescription}}</p>
+                        <button type="button" class="btn btn-outline-light">Find Out More</button>
+                    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="bottom test" style="background-image: url('assets/img/back3.jpg');">
+
+
+        <br><br><br>
+
+        <div class="picks col-lg-12" style="padding: 10px; margin-top: 30px; margin-bottom: 30px; box-shadow: 0px 0px 10px 10px black; background: linear-gradient(to left, #3E2F5B 0%, #FFC857 74%);">
+
+            <div data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-delay="500" data-aos-duration="9000" class="line col-lg-8">
+                <hr style="height:2px; background: white">
+            </div>
+
+            <div class="text col-lg-8" style="color: white; position: initial;">
+                <h4 style="font-size: 30px; text-align: right; font-family: sofia;">BRAND PARTNERS</h4>
+            </div>
+
+            <div data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-delay="500" data-aos-duration="9000" class="line col-lg-5">
+                <hr style="height:2px; background: white">
+            </div>
+
+        </div>
+
+
+        <div class="d-flex flex-wrap" [@listAnimation] >
+            
+            <span *ngFor = "let shop of brands; let i = index"   >
+
+                <span *ngIf="i < numberOfBrands; then con1" ></span>
+
+                <ng-template #con1>
+
+                    <div class="p-2 border brand"  [@hoverAnimation]="i == brandIndex ? 'postHover' : 'normal'"  (mouseenter)="changeState('postHover',i);changeInfoState(true, i)" (mouseleave)="changeState(null,-1);changeInfoState(false, -1)">
+    
+                        <img class="imagetest" src="{{shop.brand.photoURL}}" alt="" style="background: linear-gradient(315deg, #3E2F5B 0%, #FFC857 74%);">
+            
+                        <div class="brandContainer">
+            
+                            <h5 class="brandName">
+            
+                                {{shop.brand.brandName}}
+            
+                            </h5>
+              
+                            <div class="brandInfo">
+                                
+                                <table>
+            
+                                    <tr><td>Floor {{shop.address.floorNumber}} Shop {{shop.address.shopNumber}}</td></tr>
+             
+                                    <tr><td>{{shop.tenant.ownerEmail}}</td></tr>
+            
+                                    <tr><td>{{shop.tenant.ownerContact}}</td></tr>
+             
+                                </table>
+             
+                            </div>
+            
+                        </div>
+            
+                    </div>
+
+                </ng-template>
+
+            </span>
+            
+        </div>
+
+        <div class="loadmore" style="justify-content: center; display: flex;">
+
+            <button style="align-self: center;" (click) = "loadMoreBrands()" type="button" class="btn btn-dark"  data-toggle="tooltip" title="Click to Load More Brands ">Load More</button>
+
+        </div>
+
+    </div>
+
+</div>
